@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - '14'
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  token:
+    secure: 1//01OUlQ0QuOko9CgYIARAAGAESNwF-L9Ir9pV8sTgvULIUgEeg55j99WYCPhVK4QW2ML-ito_e58cfqxABvJzcqWWdPjJjHS79TL4
+
